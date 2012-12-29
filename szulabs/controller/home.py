@@ -3,6 +3,7 @@
 
 from web import Controller
 
+
 class HomeHandler(Controller):
-	def get(self):
-		self.render('home/home.html')
+    def get(self):
+        self.render('home/home.html')
