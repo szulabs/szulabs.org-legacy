@@ -1,7 +1,19 @@
+/*
+Stu Labs.
+*/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,
+dl, dt, dd, ul, ol, li,
+pre, code,
+form, fieldset, legend, button, input, textarea, 
+table, tbody, th, tr, td { margin: 0; padding: 0; }
+ul, ol { list-style: none;}
+a { text-decoration: none; color: #0a0a0a;}
+img { border: 0; }
+
 body{
 	margin: 0px;
 	padding: 0px;
-	font-family: 微软雅黑;
+	font-family: 微软雅黑, 'Microsoft Yahei';
 	background-color: #dcddda;
 }
 
@@ -18,7 +30,7 @@ body{
 }
 
 #logo img{
-	opacity: 0.8;
+	opacity: 0.9;
 }
 
 #logo img:hover{
@@ -43,6 +55,7 @@ body{
 	line-height: 57px;
 	width: 80px;
 	font-size: 16px;
+	margin-right: 40px;
 }
 
 #main{
@@ -54,13 +67,27 @@ body{
 #footer{
 	background: url(/static/images/footer-bg.jpg);
 	width: 100%;
-	padding-top: 20px;
+	padding-top: 30px;
 	padding-bottom: 20px;
-	height: 80px;
+	height: 60px;
 	margin: 0 auto;
 	text-align: center;
 	background-color: #f3f3f3;
 }
+
 #footer span{
 	font-size: 14px;
 }
+
+#content{
+	position: absolute;
+	padding-top: 20px;
+	left: 750px;
+	width: 450px;
+}
+#content p{
+	padding-top: 20px;
+	text-indent: 2em;
+	color: #4a4a4a;
+}
+

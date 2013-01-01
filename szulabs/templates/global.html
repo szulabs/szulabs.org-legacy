@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Szu Lab.{% endblock %}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Language" content="zh-CN" />
+    <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/global.css') }}" type="text/css" />
+    {% block htmlhead %}
+    {% endblock %}
+</head>
+<body>
+    {% block header %}
+    <div id="header">
+        <div id="logo">
+            <img src="{{ url_for('static', filename='images/top-logo.png') }}" alt="学子天地实验室" title="学子天地实验室" />
+        </div>
+    </div>
+    {% endblock %}
+    {% block nav %}
+    <div id="nav">
+        <ul>
+            <li><a href="/" title="首页">首  页</a></li>
+            <li><a href="/experiments">试验品</a></li>
+            <li><a href="/team">团  队</a></li>
+        </ul>
+    </div>
+    {% endblock %}
+    <div id="main">
+    {% block main %}
+    <div id="content">
+        Welcome
+    </div>
+    {% endblock %}
+    </div>
+    {% block footer %}
+    <div id="footer">
+        <p>版权所有 © 2001～2013 深圳大学学子天地 荔园校园传媒资讯网</p>
+        <p><span><a href="/aboutus">关于我们</a>  |  <a href="/contactus">联系我们</a>  |  <a href="joinus">加入我们</a></span></p>
+    </div>
+    {% endblock %}
+</body>
+</html>
