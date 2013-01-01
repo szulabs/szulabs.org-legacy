@@ -1,3 +1,6 @@
-*.pyc
-szulabs/*.pyc
-
+*.py[co]
+*.log
+*.egg-info
+build
+bin
+venv
