@@ -5,8 +5,11 @@ import urllib
 import hashlib
 
 from flask import render_template
+from flask.blueprints import Blueprint
 
-from szulabs import app
+
+team_app = Blueprint("team", __name__, template_folder="../templates")
+
 
 request_url = "http://www.gravatar.com/avatar/"
 default_size = 50
@@ -14,7 +17,7 @@ members_email = ['tonyseek@gmail.com', 'chow1937@gmail.com',
                  'gatesanye@gmail.com', 'shonenada@gmail.com', ]
 
 
-@app.route("/team")
+@team_app.route("/team")
 def team():
     members = []
     for email in members_email:

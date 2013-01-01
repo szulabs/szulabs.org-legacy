@@ -2,10 +2,12 @@
 #-*- coding: utf-8 -*-
 
 from flask import render_template
+from flask.blueprints import Blueprint
 
-from szulabs import app
+
+experiments_app = Blueprint("experiments", __name__, template_folder="../templates")
 
 
-@app.route("/experiments")
+@experiments_app.route("/experiments")
 def experiments():
     return render_template("experiments.html")
