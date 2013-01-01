@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-#-*- coding: utf-8 -*-
+from szulabs.app import create_app
 
-from szulabs import app
-app.run(debug=True)
+
+application = create_app("szulabs.app", "production.conf")
