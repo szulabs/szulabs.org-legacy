@@ -7,3 +7,4 @@ bin
 venv
 app.conf
 production.conf
+szulabs/assets/components/

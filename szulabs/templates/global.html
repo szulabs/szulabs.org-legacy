@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Language" content="zh-CN" />
     <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/global.css') }}" type="text/css" />
-    {% block htmlhead %}
-    {% endblock %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='components/normalize-css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/global.css') }}">
+    <script src="{{ url_for('static', filename='components/jquery/jquery.js') }}"></script>
+    {%- block htmlhead %}
+    {%- endblock %}
 </head>
 <body>
     {% block header %}
