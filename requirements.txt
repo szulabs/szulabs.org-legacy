@@ -1,1 +1,6 @@
-flask==0.8
+Flask==0.9
+Flask-Script==0.5.2
+Jinja2==2.6
+Werkzeug==0.8.3
+distribute==0.6.34
+wsgiref==0.1.2
