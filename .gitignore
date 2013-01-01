@@ -1,6 +1,7 @@
 *.py[co]
 *.log
 *.egg-info
+*.swp
 build
 bin
 venv

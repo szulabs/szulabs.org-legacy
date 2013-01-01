@@ -1,6 +1,14 @@
 Flask==0.9
+Flask-Gears==0.1.2
 Flask-Script==0.5.2
+Gears==0.4
 Jinja2==2.6
 Werkzeug==0.8.3
+cssmin==0.1.4
 distribute==0.6.34
+gears-coffeescript==0.1.1
+gears-less==0.2
+odict==1.5.1
+ply==3.4
+slimit==0.7.4
 wsgiref==0.1.2
