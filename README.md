@@ -1,4 +1,4 @@
 szulabs.org
 ===========
 
-Laboratory of Stucampus in Szu.Just to do some interesting.
+A laboratory of StuCampus in SZU. Just to do some interesting things.
