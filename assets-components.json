@@ -2,7 +2,8 @@
   "name": "szulabs.org",
   "version": "0.0.1",
   "dependencies": {
-    "jquery": "1.8.3",
-    "normalize-css": "2.0.1"
+    "jquery": "~1.8.3",
+    "normalize-css": "~2.0.1",
+    "reset-css": "http://meyerweb.com/eric/tools/css/reset/reset.css"
   }
 }
