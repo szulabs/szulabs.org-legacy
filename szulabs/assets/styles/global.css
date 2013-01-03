@@ -99,3 +99,7 @@ body{
 #footer span{
 	font-size: 12px;
 }
+
+.team-avatar{
+	border-radius: 25px !important;
+}
