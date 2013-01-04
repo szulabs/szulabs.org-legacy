@@ -1,0 +1,8 @@
+{
+  "name": "normalize-css",
+  "version": "2.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/necolas/normalize.css.git"
+  }
+}
