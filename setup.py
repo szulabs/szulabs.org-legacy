@@ -15,23 +15,11 @@ metadata = {"name": "SZU Labs",
             "url": "https://github.com/szulabs/szulabs.org/",
             "zip_safe": False,
             "platforms": "any",
-            "package_dir": {"templates": "szulabs/templates",
-                            "assets": "szulabs/assets"},
-            "package_data": {"templates": ["*.html", "people/*.html"],
-                              "assets": ["images/*.jpg", "images/*.png",
-                                         "styles/*.css", "styles/*.less",
-                                         "scripts/*.js", "scripts/*.coffee",
-                                         "favicon.ico"]},
+            "package_data": {"templates": ["*.html"],
+                             "assets": ["*.jpg", "*.png", "*.css", "*.less",
+                                        "*.js", "*.coffee", "favicon.ico"]},
             "install_requires": install_requires,
-            "description": "A laboratory of StuCampus in SZU.",
-            "classifiers": ["Programming Language :: Python",
-                            "Operating System :: OS Independent",
-                            "Environment :: Web Environment",
-                            "Framework :: Flask",
-                            "Topic :: Internet :: WWW/HTTP",
-                            "Topic :: Internet :: WWW/HTTP :: WSGI"
-                            ]
-            }
+            "description": "A laboratory of StuCampus in SZU."}
 
 
 if __name__ == "__main__":
