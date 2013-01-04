@@ -1,1 +1,3 @@
-include requirements.txt
+include *.txt *.md
+graft szulabs/assets
+recursive-include szulabs/templates *.html
