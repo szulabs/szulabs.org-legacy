@@ -9,3 +9,7 @@ release:
 	@echo ""
 	@echo "Now you can commit and push to your repository."
 	@echo "Don't forget to bump the version."
+
+clean:
+	find . -type f -name "*.pyc" -exec rm -f {} +
+	rm -rf ./*.{egg, egg-info} ./build ./dist
