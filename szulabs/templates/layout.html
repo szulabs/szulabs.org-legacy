@@ -1,0 +1,53 @@
+{%- set site_locale = locale.language ~ "-" ~ locale.territory -%}
+{%- set site_title = _('SZU Labs') -%}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title or site_title }}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Language" content="{{ site_locale }}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {%- block assets_components %}
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename="favicon.ico") }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='components/normalize-css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='components/reset-css/index.css') }}">
+    <script src="{{ url_for('static', filename='components/jquery/jquery.js') }}"></script>
+    {%- endblock %}
+    {%- block assets_layout %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/layout.css') }}">
+    {%- endblock %}
+    {%- block assets_custom %}
+    {%- endblock %}
+</head>
+<body>
+    {%- block header %}
+    <div id="header">
+        <div id="header-top">
+            <h1 class="header-logo hide-text"><a href="/">{{ site_title }}</a></h1>
+        </div>
+        {%- block navigation %}
+        <div id="nav">
+            <ul>
+                <li><a href="/" title="首页">首  页</a></li>
+                <li><a href="/experiments">实验品</a></li>
+                <li><a href="/team">团  队</a></li>
+            </ul>
+        </div>
+        {%- endblock navigation %}
+    </div>
+    {%- endblock header %}
+    <div id="main">
+    {% block main %}
+    <div id="content">
+        Welcome
+    </div>
+    {% endblock %}
+    </div>
+    {% block footer %}
+    <div id="footer">
+        <p>Copyright &copy; 2013 <a href="http://stu.szu.edu.cn" rel="nofollow">StuCampus</a>.</p>
+        <p><span><a href="/aboutus">关于我们</a>  |  <a href="/contactus">联系我们</a>  |  <a href="joinus">加入我们</a></span></p>
+    </div>
+    {% endblock %}
+</body>
+</html>

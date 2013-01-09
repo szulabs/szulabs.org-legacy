@@ -7,7 +7,7 @@ from setuptools import setup, find_packages
 install_requires = [l.strip() for l in open("requirements.txt", "r")]
 
 
-metadata = {"name": "SZU Labs",
+metadata = {"name": "szulabs",
             "version": "0.0.1",
             "packages": find_packages(),
             "author": "Lyd.",
@@ -15,9 +15,8 @@ metadata = {"name": "SZU Labs",
             "url": "https://github.com/szulabs/szulabs.org/",
             "zip_safe": False,
             "platforms": "any",
-            "package_data": {"templates": ["*.html"],
-                             "assets": ["*.jpg", "*.png", "*.css", "*.less",
-                                        "*.js", "*.coffee", "favicon.ico"]},
+            "package_data": {"": ["*.html", "*.jpg", "*.png", "*.css",
+                                  "*.less", "*.js", "*.coffee", "*.ico"]},
             "install_requires": install_requires,
             "description": "A laboratory of StuCampus in SZU."}
 
