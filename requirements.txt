@@ -21,12 +21,6 @@ gevent-psycopg2==0.0.3
 greenlet==0.4.0
 psycopg2==2.4.6
 python-openid==2.2.5
-cssmin==0.1.4
-distribute==0.6.34
-gears-coffeescript==0.1.1
-gears-less==0.2
-odict==1.5.1
-ply==3.4
 pytz==2012j
 slimit==0.7.4
 speaklater==1.3
