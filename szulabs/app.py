@@ -2,6 +2,7 @@ from flask import Flask
 from flask.ext.gears import Gears
 
 from szulabs.assets import setup_assets_compilers, setup_assets_compressors
+from szulabs.logger import setup_logger
 from szulabs.views.master import master_app
 from szulabs.views.people import people_app
 from szulabs.views.team import team_app
@@ -22,6 +23,8 @@ def create_app(import_name=None, config=None):
     gears.init_app(app)
     setup_assets_compilers(app)
     setup_assets_compressors(app)
+
+    setup_logger(app)
 
     app.register_blueprint(master_app)
     app.register_blueprint(people_app)
