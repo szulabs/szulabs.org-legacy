@@ -1,7 +1,7 @@
 * { margin:0; padding:0; }
 
 body{
-	font-family: "Microsoft Yahei";
+	font-family: "Microsoft Yahei", Tahoma, Geneva, sans-serif, monospace;
 	background-color: #dcddda;
 }
 
@@ -61,6 +61,11 @@ body{
 	margin-right: 40px;
 }
 
+#nav a{
+	text-decoration: none;
+	color:#606060;
+}
+
 #main{
 	background: url(/static/images/main-bg.png) repeat-x;
 	height: 630px;
@@ -102,4 +107,5 @@ body{
 
 .team-avatar{
 	border-radius: 25px !important;
+	margin-bottom: 10px;
 }
