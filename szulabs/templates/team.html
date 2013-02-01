@@ -9,7 +9,7 @@ Team - Szu Labs.
         	<ul>
             {% for member in members %}
                 <li>
-                	<img src="{{ member.avatar }}" width="50" height="50" class="team-avatar" />
+                	<img src="{{ member.avatar }}" width="50" height="50" class="team-avatar" alt="{{ member.nickname }}" title="{{ member.nickname }}" /> {{ member.nickname }}
                 </li>
             {% endfor %}
             </ul>
