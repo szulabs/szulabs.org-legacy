@@ -5,5 +5,5 @@ from szulabs.models.experiment import Experiment
 
 
 def get_experiments():
-	experiments = Experiment.query.all()
-	return experiments
+    experiments = Experiment.query.all()
+    return experiments

@@ -31,12 +31,12 @@ class People(db.Model):
         self.truename = truename
 
     def setPassword(self, password):
-    	hashed_password = self.__hash_password(password, self.__salt__)
-    	self.password = hashed_password
+        hashed_password = self.__hash_password(password, self.__salt__)
+        self.password = hashed_password
 
     def __hash_password(input, salt):
         hashed_input = md5("<%s|%s>" % input, salt).hexdigest()
         return hashed_input
 
     def __repr__(self):
-    	return "<Email %r>" % self.email
+        return "<Email %r>" % self.email
