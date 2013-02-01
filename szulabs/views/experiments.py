@@ -13,5 +13,5 @@ experiments_app = Blueprint("experiments", __name__,
 
 @experiments_app.route("/experiments")
 def experiments():
-	experiments = experiment.get_experiments()
+    experiments = experiment.get_experiments()
     return render_template("experiments.html", experiments=experiments)

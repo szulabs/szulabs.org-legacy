@@ -4,7 +4,7 @@
 import datetime
 from hashlib import md5
 
-from szulabs.app import db
+from szulabs.extensions import db
 
 from szulabs.settings import SALT
 
