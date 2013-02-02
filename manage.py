@@ -18,10 +18,16 @@ manager = Manager(app)
 
 
 @manager.command
-def initdb():
+def syncdb():
     """Initialize database."""
     db.create_all()
     create_category_db()
+
+
+@manager.command
+def dropddb():
+    """Drop database."""
+    db.drop_all()
 
 
 if __name__ == "__main__":
