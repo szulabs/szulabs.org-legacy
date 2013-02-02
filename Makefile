@@ -18,6 +18,9 @@ clean:
 	rm -rf ./*.{egg, egg-info} ./build ./dist
 
 venv:
+	rm -rf ./venv
 	virtualenv -p python2.7 --distribute venv
+	echo "szulabs-dev" > ./venv/__name__
+	. ./venv/bin/activate; pip install -r requirements.txt
 
 .PHONY: build release clean venv
