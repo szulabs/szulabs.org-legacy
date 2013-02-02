@@ -1,5 +1,6 @@
 from flask.ext.babel import Babel, get_locale
 from flask.ext.gears import Gears
+from flask.ext.login import LoginManager
 from flask.ext.sqlalchemy import SQLAlchemy
 from gears.compressors import SlimItCompressor, CSSMinCompressor
 from gears_coffeescript import CoffeeScriptCompiler
@@ -11,6 +12,7 @@ from gears_coffeescript import CoffeeScriptCompiler
 
 babel = Babel()
 gears = Gears()
+login_manager = LoginManager()
 db = SQLAlchemy()
 
 
