@@ -60,3 +60,24 @@ def setup_assets_compressors(app):
     if not app.config["DEBUG"] or app.config["TESTING"]:
         for mimetype, compressor in assets_compressors.iteritems():
             env.compressors.register(mimetype, compressor)
+
+
+# -------------------
+# Database Management
+# -------------------
+
+def setup_database(app):
+    """Setup database.
+
+    Creates database schema automatically for debug environment and sqlite
+    memory mode.
+    """
+    db = app.extensions["sqlalchemy"].db
+
+    @app.before_first_request
+    def create_database_for_development():
+        is_sqlite_memory =  (db.engine.url.drivername == "sqlite" and
+                             db.engine.url.host in ("", ":memory:"))
+        #: creates schema automatically, only for sqlite in debug environment
+        if app.config["DEBUG"] and is_sqlite_memory:
+            db.create_all()

@@ -2,7 +2,7 @@ from flask import Flask
 
 from szulabs.extensions import babel, bcrypt, gears, login_manager, db
 from szulabs.extensions import (setup_i18n, setup_assets_compilers,
-                                setup_assets_compressors)
+                                setup_assets_compressors, setup_database)
 from szulabs.account.views import account_app
 from szulabs.team.views import team_app
 
@@ -24,6 +24,7 @@ def create_app(import_name=None, config=None):
     setup_assets_compressors(app)
     login_manager.init_app(app)
     db.init_app(app)
+    setup_database(app)
 
     #: register blueprints
     app.register_blueprint(account_app)
