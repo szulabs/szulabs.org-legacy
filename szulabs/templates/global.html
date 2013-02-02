@@ -7,9 +7,7 @@
     <meta http-equiv="Content-Language" content="zh-CN" />
     <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico">
     <link rel="stylesheet" href="{{ url_for('static', filename='components/normalize-css/normalize.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='components/reset-css/index.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/global.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/demo.css') }}">
     <script src="{{ url_for('static', filename='components/jquery/jquery.js') }}"></script>
     {%- block htmlhead %}
     {%- endblock %}
@@ -41,7 +39,7 @@
     {% block footer %}
     <div id="footer">
         <p>Copyright &copy; 2013 <a href="http://stu.szu.edu.cn" rel="nofollow">StuCampus</a>.</p>
-        <p><span><a href="/aboutus">关于我们</a>  |  <a href="/contactus">联系我们</a>  |  <a href="joinus">加入我们</a></span></p>
+        <p><span><a href="/aboutus">关于我们</a>  |  <a href="/contactus">联系我们</a>  |  <a href="joinus">加入我们</a>  |  <a href="/login">用户登录</a></span></p>
     </div>
     {% endblock %}
 </body>
