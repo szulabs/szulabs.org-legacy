@@ -26,5 +26,5 @@ def team():
         	          .hexdigest() + "?" + urllib
         	          .urlencode({'s': str(default_size)}))
         members.append({'email': member.email, 'avatar': avatar_url, 
-        	            'nickname': member.nickname})
+        	            'nickname': member.nickname, 'id':member.id})
     return render_template("team.html", members=members)

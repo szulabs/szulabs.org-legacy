@@ -2,6 +2,9 @@
 {% block title %}
 Team - Szu Labs.
 {% endblock %}
+{% block htmlhead %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/people.css') }}">
+{% endblock %}
 {% block main %}
     <div id="content">
         <h3> 团 队 </h3>
@@ -9,7 +12,14 @@ Team - Szu Labs.
         	<ul>
             {% for member in members %}
                 <li>
-                	<img src="{{ member.avatar }}" width="50" height="50" class="team-avatar" alt="{{ member.nickname }}" title="{{ member.nickname }}" /> {{ member.nickname }}
+                	<div class="people-card" id="people-{{member.email}}">
+                        <div class="people-card-img">
+                            <a href="/people/{{member.id}}" alt="{{ member.nickname }}" title="{{ member.nickname }}"><img src="{{ member.avatar }}" width="50" height="50" class="team-avatar" alt="{{ member.nickname }}"   title="{{ member.nickname }}" /></a>
+                        </div>
+                        <div class="people-card-info">
+                            <a href="/people/{{ member.id }}" alt="{{ member.nickname}}" title="{{ member.nickname}}">{{ member.nickname }}</a>
+                        </div>
+                    </div>
                 </li>
             {% endfor %}
             </ul>

@@ -88,7 +88,7 @@ ol, ul {
 #content{
 	position: absolute;
 	padding-top: 20px;
-	left: 650px;
+	left: 550px;
 	width: 450px;
 }
 #content p{
@@ -117,9 +117,4 @@ ol, ul {
 
 #footer span{
 	font-size: 12px;
-}
-
-.team-avatar{
-	border-radius: 25px !important;
-	margin-bottom: 10px;
 }

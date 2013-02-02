@@ -1,0 +1,31 @@
+.team-avatar{
+	border-radius: 25px !important;
+}
+
+.team-avatar:hover{
+	border-radius: 5px !important;
+}
+
+.people-card{
+	border-radius: 10px;
+	border: 1px #fbfbfb solid;
+	background: #fbfbfb;
+	padding: 10px;
+    box-shadow: 0px 1px 1px 0px rgba(100, 100, 100, 0.8);
+    margin-bottom: 10px;
+}
+
+.people-card-img{
+	display: inline;
+	width: 70px;
+	text-align: center;
+}
+
+.people-card-info{
+	display: inline;
+}
+
+.people-card-info a{
+	color:#4f4f4f;
+	text-decoration: none;
+}
