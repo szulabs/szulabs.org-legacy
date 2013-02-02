@@ -1,7 +1,8 @@
 from flask import Flask
 
-from szulabs.extensions import babel, gears, db, setup_i18n
-from szulabs.assets import setup_assets_compilers, setup_assets_compressors
+from szulabs.extensions import babel, gears, db
+from szulabs.extensions import (setup_i18n, setup_assets_compilers,
+                                setup_assets_compressors)
 from szulabs.account.views import account_app
 from szulabs.team.views import team_app
 
