@@ -1,6 +1,6 @@
 from flask import Flask
 
-from szulabs.extensions import babel, gears, login_manager, db
+from szulabs.extensions import babel, bcrypt, gears, login_manager, db
 from szulabs.extensions import (setup_i18n, setup_assets_compilers,
                                 setup_assets_compressors)
 from szulabs.account.views import account_app
@@ -17,6 +17,7 @@ def create_app(import_name=None, config=None):
 
     #: initialize extensions
     babel.init_app(app)
+    bcrypt.init_app(app)
     setup_i18n(app)
     gears.init_app(app)
     setup_assets_compilers(app)

@@ -2,6 +2,7 @@ Babel==0.9.6
 blinker==1.2
 Flask==0.9
 Flask-Babel==0.8
+Flask-Bcrypt==0.5.2
 Flask-Gears==0.1.2
 Flask-Login==0.1.3
 Flask-Mail==0.7.4

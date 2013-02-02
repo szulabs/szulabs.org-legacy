@@ -1,4 +1,5 @@
 from flask.ext.babel import Babel, get_locale
+from flask.ext.bcrypt import Bcrypt
 from flask.ext.gears import Gears
 from flask.ext.login import LoginManager
 from flask.ext.sqlalchemy import SQLAlchemy
@@ -11,6 +12,7 @@ from gears_coffeescript import CoffeeScriptCompiler
 # ----------------
 
 babel = Babel()
+bcrypt = Bcrypt()
 gears = Gears()
 login_manager = LoginManager()
 db = SQLAlchemy()
