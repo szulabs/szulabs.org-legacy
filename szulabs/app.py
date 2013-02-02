@@ -22,7 +22,7 @@ def create_app(import_name=None, config=None):
     gears.init_app(app)
     setup_assets_compilers(app)
     setup_assets_compressors(app)
-    login_manager.setup_app(app)
+    login_manager.init_app(app)
     db.init_app(app)
 
     #: register blueprints

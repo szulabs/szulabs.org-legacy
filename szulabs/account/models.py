@@ -11,6 +11,12 @@ class UserAccount(db.Model, UserMixin):
     nickname = db.Column(db.Unicode(20), unique=True)
     hashed_password = db.Column(db.String(60))
 
+    class query_class(db.Query):
+
+        def get_by_email(self, email):
+            """Gets user account by email."""
+            return self.filter_by(email=email).first()
+
     def change_password(self, new_password):
         """Changes user's account password."""
         self.hashed_password = bcrypt.generate_password_hash(new_password, 10)
