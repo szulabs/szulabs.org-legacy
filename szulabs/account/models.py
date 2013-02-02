@@ -25,6 +25,10 @@ class UserAccount(db.Model, UserMixin):
         """Checks input value is correct password or not."""
         return bcrypt.check_password_hash(self.hashed_password, input_value)
 
+    def get_id(self):
+        """Implemented."""
+        return self.user_id
+
 
 @login_manager.user_loader
 def load_user(user_id):
