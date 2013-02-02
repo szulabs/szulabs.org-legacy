@@ -10,6 +10,7 @@ Flask-Script==0.5.3
 Flask-SQLAlchemy==0.16
 Flask-WTF==0.8
 Gears==0.4
+gears-coffeescript==0.1.1
 gevent==0.13.8
 gevent-psycopg2==0.0.3
 Jinja2==2.6
