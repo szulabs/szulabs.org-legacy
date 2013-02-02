@@ -6,8 +6,6 @@ from hashlib import md5
 
 from szulabs.extensions import db
 
-from szulabs.settings import SALT
-
 
 class People(db.Model):
 
@@ -17,24 +15,18 @@ class People(db.Model):
     nickname = db.Column(db.String(16))
     truename = db.Column(db.String(5))
     created = db.Column(db.DateTime)
-    
-    __salt__ = SALT
+
 
     def __init__(self, email):
         self.email = email
         self.created = datetime.utcnow()
 
-    def setNickname(self, nickname):
-        self.nickname = nickname
-
-    def setTruename(self, truename):
-        self.truename = truename
-
-    def setPassword(self, password):
-        hashed_password = self.__hash_password(password, self.__salt__)
+    def change_password(self, password):
+        """TODO: change the 2nd password to a dynamic salt"""
+        hashed_password = self.hash_password(password, password)
         self.password = hashed_password
 
-    def __hash_password(input, salt):
+    def hash_password(input, salt):
         hashed_input = md5("<%s|%s>" % input, salt).hexdigest()
         return hashed_input
 
