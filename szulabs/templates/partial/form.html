@@ -1,0 +1,14 @@
+{%- macro form_field(field, with_label=True) %}
+    {# TODO: import the design #}
+    <div>
+        {{ field.label() if with_label }}
+        {{ field() }}
+        {%- if field.errors %}
+            <ul style="color:red">
+                {% for error in field.errors %}
+                <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {%- endif %}
+    </div>
+{%- endmacro %}

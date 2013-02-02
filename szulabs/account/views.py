@@ -3,8 +3,8 @@ from flask.blueprints import Blueprint
 from flask.ext.babel import lazy_gettext as _
 from flask.ext.login import login_user
 
-from szulabs.extensions import login_manager
-from szulabs.account.forms import LoginForm
+from szulabs.extensions import db, login_manager
+from szulabs.account.forms import LoginForm, SignUpForm
 from szulabs.account.models import UserAccount
 
 
@@ -16,6 +16,8 @@ login_manager.login_view = "account.login"
 
 @account_app.route("/login", methods=["GET", "POST"])
 def login():
+    """The login view and handler."""
+    #: TODO support 'next' argument to back
     form = LoginForm()
     if form.validate_on_submit():
         account = UserAccount.query.get_by_email(form.email.data)
@@ -27,3 +29,22 @@ def login():
         #: TODO: where?
         return redirect(url_for("account.login"))
     return render_template("login.html", form=form)
+
+
+@account_app.route("/signup", methods=["GET", "POST"])
+def signup():
+    """The sign up view and handler."""
+    form = SignUpForm()
+    if form.validate_on_submit():
+        #: FIXME add a validator to confirm email has not been used
+        account = UserAccount(email=form.email.data,
+                              nickname=form.nickname.data)
+        account.change_password(form.password.data)
+        #: TODO need to send a confirmation email
+        db.session.add(account)
+        db.session.commit()
+        #: success
+        flash(_("Welcome to our site."))
+        #: FIXME: where?
+        return redirect(url_for("account.login"))
+    return render_template("signup.html", form=form)

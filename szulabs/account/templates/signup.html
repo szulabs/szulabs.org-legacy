@@ -2,9 +2,11 @@
 {% from "partial/form.html" import form_field %}
 
 {% block main %}
-    <form action="{{ url_for('account.login') }}" method="post">
+    <form action="{{ url_for('account.signup') }}" method="post">
         {{ form_field(form.email) }}
+        {{ form_field(form.nickname) }}
         {{ form_field(form.password) }}
+        {{ form_field(form.confirm_password) }}
         {{ form_field(form.submit, with_label=False) }}
         {{ form.csrf_token() }}
     </form>
